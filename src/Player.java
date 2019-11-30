@@ -35,6 +35,6 @@ public class Player {
 	}
 
 	public String toString() {
-		return "ID:" + id + " name:" + name + " " + position;
+		return "ID:" + id + " name:" + name + " vị trí:" + position;
 	}
 }

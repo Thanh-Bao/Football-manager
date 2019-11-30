@@ -19,7 +19,7 @@ public class Test {
 		Player player22 = new Player("B2", "Ronaldo", "Tiền đạo");
 
 		Player player31 = new Player("C1", "Messi", "Trung Vệ");
-		Player player32 = new Player("C2", "Donal Trump", "Tiền Vệ");
+		Player player32 = new Player("C2", "neymar", "Tiền Vệ");
 
 /////// for team
 		ArrayList<Player> listTeam1 = new ArrayList<Player>();
