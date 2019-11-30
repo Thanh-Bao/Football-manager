@@ -67,4 +67,9 @@ public class FootballMatch {
 		this.winMap = winMap;
 	}
 
+	public ArrayList<Player> getAllPlayer() {
+		teamA.addAll(teamB);
+		return teamA;
+	}
+
 }
