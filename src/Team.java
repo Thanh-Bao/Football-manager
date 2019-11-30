@@ -38,4 +38,11 @@ public class Team {
 	public String toString() {
 		return "Team:" + name + "list:" + listOfPlayers + "manager:" + coachName;
 	}
+
+	public boolean equals(Team obj) {
+		boolean sameName = name.equals(obj.name);
+		boolean sameList = listOfPlayers.equals(obj.listOfPlayers);
+		boolean sameManager = coachName.contentEquals(obj.coachName);
+		return sameName && sameList && sameManager;
+	}
 }

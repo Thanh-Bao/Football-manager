@@ -67,7 +67,7 @@ public class Award {
 		this.matchList = matchList;
 	}
 
-	public HashMap<Player, Integer> static_PlayerTime() {
+	public HashMap<Player, Integer> staticPlayer_PlayTime() {
 		HashMap<Player, Integer> result = new HashMap<Player, Integer>();
 		for (FootballMatch match : matchList) {
 			for (Player pl : match.getAllPlayer()) {
@@ -80,5 +80,51 @@ public class Award {
 			}
 		}
 		return result;
+	}
+
+	public HashMap<Player, Integer> staticPlayer_winScore() {
+		HashMap<Player, Integer> result = new HashMap<Player, Integer>();
+		for (FootballMatch match : matchList) {
+			match.getWinMap().forEach((k, v) -> {
+				if (result.containsKey(k)) {
+					int newScore = result.get(k) + match.getWinMap().get(k);
+					result.put(k, newScore);
+				} else {
+					result.put(k, match.getWinMap().get(k));
+				}
+			});
+		}
+		return result;
+	}
+
+	public int winScoreTeam(Team t) {
+		int result = 0;
+		for (FootballMatch match : matchList) {
+			if (match.getTeamWin().equals(t)) {
+				result++;
+			}
+		}
+		return result;
+	}
+
+	public HashMap<Player, Integer> bestPlayer() {
+		HashMap<Player, Integer> output = new HashMap<Player, Integer>();
+		Player theBest = null;
+		int scoreMax = 0;
+		for (Player pl : staticPlayer_winScore().keySet()) {
+			if (staticPlayer_winScore().get(pl) > scoreMax) {
+				theBest = pl;
+				scoreMax = staticPlayer_winScore().get(pl);
+			}
+		}
+		output.put(theBest, scoreMax);
+		for (Player pl : staticPlayer_winScore().keySet()) {
+			if (staticPlayer_winScore().get(pl) == scoreMax) {
+				output.put(pl, scoreMax);
+			}
+		}
+
+		return output;
+
 	}
 }
