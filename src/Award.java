@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Award {
 	private String name;
@@ -66,4 +67,18 @@ public class Award {
 		this.matchList = matchList;
 	}
 
+	public HashMap<Player, Integer> static_PlayerTime() {
+		HashMap<Player, Integer> result = new HashMap<Player, Integer>();
+		for (FootballMatch match : matchList) {
+			for (Player pl : match.getAllPlayer()) {
+				if (result.containsKey(pl)) {
+					int newTime = result.get(pl) + 1;
+					result.put(pl, newTime);
+				} else {
+					result.put(pl, 1);
+				}
+			}
+		}
+		return result;
+	}
 }

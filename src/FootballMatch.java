@@ -68,8 +68,10 @@ public class FootballMatch {
 	}
 
 	public ArrayList<Player> getAllPlayer() {
-		teamA.addAll(teamB);
-		return teamA;
+		ArrayList<Player> output = new ArrayList<Player>();
+		output.addAll(teamA);
+		output.addAll(teamB);
+		return output;
 	}
 
 }
