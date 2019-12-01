@@ -3,7 +3,7 @@
 ![Imgur](https://i.imgur.com/0ZvYu66.jpg)
 
 
-#**thống kê số lần ra sân của mỗi cầu thủ :** 
+# **thống kê số lần ra sân của mỗi cầu thủ :**
 
     public HashMap<Player, Integer> staticPlayer_PlayTime() {
     		HashMap<Player, Integer> result = new HashMap<Player, Integer>();
@@ -20,7 +20,7 @@
     		return result;
     	}
 
-#**Thống kê số lần ghi bàn của cầu thủ :**
+# **Thống kê số lần ghi bàn của cầu thủ :**
 
 	public HashMap<Player, Integer> staticPlayer_winScore() {
 		HashMap<Player, Integer> result = new HashMap<Player, Integer>();
@@ -37,7 +37,7 @@
 		return result;
 	}
 
-#**Tìm số bàn thắng của một đội cho trước**
+# **Tìm số bàn thắng của một đội cho trước**
 
     public int winScoreTeam(Team t) {
     	int result = 0;
@@ -49,7 +49,7 @@
     	return result;
     }
 
-#**Danh sách  (các) cầu thủ ghi bàn nhiều nhất**
+# **Danh sách  (các) cầu thủ ghi bàn nhiều nhất**
 
 	public HashMap<Player, Integer> bestPlayer() {
 		HashMap<Player, Integer> output = new HashMap<Player, Integer>();
