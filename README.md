@@ -1,4 +1,7 @@
 # Football-manager
+
+[![Crowdin](https://d322cqt584bo4o.cloudfront.net/betaflight-configurator/localized.svg)](https://www.baeldung.com/java-8-lambda-expressions-tips) [![Build Status](https://travis-ci.com/betaflight/betaflight-configurator.svg?branch=master)](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=betaflight_betaflight-configurator&metric=alert_status)](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html) [![Build Status](https://dev.azure.com/Betaflight/Betaflight%20Nightlies/_apis/build/status/betaflight.betaflight-configurator?branchName=master)](https://docs.oracle.com/javase/9/docs/api/java/lang/Iterable.html)
+
  
 ![Imgur](https://i.imgur.com/0ZvYu66.jpg)
 
